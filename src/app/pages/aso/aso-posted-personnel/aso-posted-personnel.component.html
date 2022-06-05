@@ -1,0 +1,73 @@
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+<ion-content>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 80% !important;">POSTED PERSONNEL</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+      <p class="lable_one">{{site_details.unit_name}}</p>
+      </div>
+      <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+        <p class="lable_one">STRENGTH AS ON :  {{current_date}}</p>
+      </div>
+  </div>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+        <th>{{item.name}}</th>
+       </ng-container>
+        <th>TOTAL</th>
+      </tr>
+      <tr>
+      <ng-container *ngFor="let item of strength_detail">
+        <td>{{item.count}}</td>
+      </ng-container>
+        <td>{{total_strength_count}}</td>
+      </tr>
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+          <td>{{item.present_count}}</td>
+        </ng-container>
+        <td>{{two_total_strength_count}}</td>
+      </tr>
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+          <td>{{item.balance}}</td>
+        </ng-container>
+        <td>{{balance_strength_count}}</td>
+      </tr>
+    </table> 
+  </div>
+  <br>
+  <br>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <th>BSS NO</th>
+        <th>NAME</th>
+        <th>CA</th>
+        <th>POSTED DATE</th>
+        <th>SHIFT TYPE</th>
+        <th>STATUS</th>
+        <th>REMARKS</th>
+      </tr>
+      <ng-container *ngFor="let item of strength_emp_detail">
+        <tr>
+          <td (click)="single_emp_attend(item.emp_id)">{{item.emp_id.bss_no}}</td>
+          <td style="text-align: left;">{{item.emp_id.name}}</td>
+          <td>{{item.emp_id.user_designation}}</td>
+          <td>{{item.emp_id.posting_date}}</td>
+          <td>{{item.shift_type}}</td>
+          <td>{{item.present_status}}</td>
+          <td>{{item.remark_status}}</td>
+        </tr>
+      </ng-container>
+    </table> 
+  </div>
+  <br>
+  <br>
+  <br>
+</ion-content>
+<app-footer></app-footer>

@@ -1,0 +1,67 @@
+:host {
+    // ion-content {
+    //     --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+    // }
+}
+
+.paz {
+    position: relative;
+    z-index: 10;
+}
+
+
+.example1 {
+    background: url('../../../assets/img/background.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.shadows {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 70px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column10 {
+    float: left;
+    width: 5%;
+  }
+
+  .column20 {
+    float: left;
+    width: 20%;
+  }
+
+
+  .column70 {
+    float: left;
+    width: 70%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  .container {
+    height: 70px;
+    position: relative;
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  

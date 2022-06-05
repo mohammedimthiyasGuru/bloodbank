@@ -1,0 +1,18 @@
+:host {
+    ion-content {
+        --background: #1843a0;
+    }
+
+    ion-list {
+        &.list-md {
+            padding: 0;
+        }
+    }
+
+ 
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+

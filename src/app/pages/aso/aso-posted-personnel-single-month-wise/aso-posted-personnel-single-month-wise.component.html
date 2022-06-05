@@ -1,0 +1,112 @@
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+<ion-content>
+  <div class="row">
+    <div class="emp_child" style="box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);">
+    <div class="col-md-12">
+       <div class="child" style="text-align: left!important;">
+        {{security_detail.bss_no}} <br>
+        {{security_detail.name}} <br>
+        {{security_detail.user_designation}} <br>
+        {{security_detail.email_id}} <br>
+       </div>
+       <div class="child">
+        <div>
+          <img src="../../../../../assets/img/avatar.jpeg" style="border-radius: 50%;margin-top: -50px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-md-12">
+    <div class="child_one">
+       <div style="border: 1px solid lightblue;
+       border-radius: 8px;
+       box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+       margin: 8px;
+       width: 70%;
+       float: left;
+       padding-top: 5px;">
+           <span style="font-weight: 700;">Posting Date</span>
+           <p>{{security_detail.posting_date}}</p>
+       </div>
+     </div>
+     <div class="child_one">
+      <div style="border: 1px solid lightblue;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      margin: 8px;
+      width: 70%;
+      float: right;
+      padding-top: 5px;">
+         <span style="font-weight: 700;">Mobile No</span>
+        <p>{{security_detail.mobile}}</p>
+    </div>
+     </div> 
+  </div>
+  <hr style="background: #1843a0;
+  width: 80%;
+  margin-top:0px !important;
+  margin-bottom:0px !important;
+">
+  <div class="col-md-12">
+     <div>
+      <div style="border: 1px solid lightblue;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      padding-top: 5px;
+      margin: 8px 22px 4px 19px;">
+         <span style="font-weight: 700;">Address</span>
+        <p>{{security_detail.address}}</p>
+    </div>
+     </div> 
+  </div>
+    <!-- <div class="col-md-12" style="text-align:left; margin-top: 10px;">
+      <div style="text-align:center;">
+        <img src="../../../../../assets/img/avatar.jpeg" style="border-radius: 50%;">
+      </div>
+      <p class="lable_one" style="padding-left: 18px;">BSS NO : <span style="font-weight: 400;">{{security_detail.bss_no}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Name : <span style="font-weight: 400;">{{security_detail.name}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Cat : <span style="font-weight: 400;">{{security_detail.user_designation}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Posting Date : <span style="font-weight: 400;">{{security_detail.posting_date}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Address : <span style="font-weight: 400;">{{security_detail.address}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Mobile : <span style="font-weight: 400;">{{security_detail.mobile}}</span> </p>
+      <p class="lable_one" style="padding-left: 18px;">Email Id : <span style="font-weight: 400;">{{security_detail.email_id}}</span> </p>
+      </div> -->
+  </div>
+  <br>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <th rowspan="2">Date</th>
+        <th colspan="3" >SHIFT</th>
+        <th rowspan="2">RKS</th>
+      </tr>
+      <tr>
+        <th>I</th>
+        <th>II</th>
+        <th>III</th>
+      </tr>
+      <ng-container *ngFor="let item of date_value_detail">
+        <tr>
+          <td>{{item.display_date}}</td>
+          <td>{{item.shift_one}}</td>
+          <td>{{item.shift_two}}</td>
+          <td>{{item.shift_three}}</td>
+          <td>0/{{item.shift_total_days}}</td>
+        </tr>
+      </ng-container>
+      
+    </table> 
+  </div>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 80% !important;" (click)="single_emp_attend()">CURRENT MONTH</button>
+    <br>
+    <br>
+    <button  class="primary_button" style="width: 80% !important;" (click)="back_redirec()">BACK</button>
+  </div>
+  <br>
+  <br>
+</ion-content>
+<app-footer></app-footer>
+

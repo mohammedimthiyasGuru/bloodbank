@@ -1,0 +1,94 @@
+
+
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+
+
+
+<ion-content>
+
+  <div class="popup_alert" *ngIf="loader_visible">
+    <div class="modal-dialog">
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+      <button  class="primary_button" style="width: 80% !important;">View Attendance Shift Wise</button>
+    </div>    
+    <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+      <p class="lable_one">{{site_details.unit_name}}</p>
+      </div>
+      <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+        <input type="date"  [ngModel]="selected_date | date:'yyyy-MM-dd'"  (ngModelChange)="setDate('start', $event)"  name="selected_date" >
+      </div>
+       <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+        <p class="lable_one">{{today_date}}</p>
+      </div>
+      <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+        <p class="lable_one">{{shift_type}}:  {{site_time}}</p>
+      </div>
+  </div>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+        <th>{{item.name}}</th>
+       </ng-container>
+        <th>TOTAL</th>
+      </tr>
+      <tr>
+      <ng-container *ngFor="let item of strength_detail">
+        <td>{{item.count}}</td>
+      </ng-container>
+        <td>{{total_strength_count}}</td>
+      </tr>
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+          <td>{{item.present_count}}</td>
+        </ng-container>
+        <td>{{two_total_strength_count}}</td>
+      </tr>
+      <tr>
+        <ng-container *ngFor="let item of strength_detail">
+          <td>{{item.balance}}</td>
+        </ng-container>
+        <td>{{balance_strength_count}}</td>
+      </tr>
+    </table> 
+  </div>
+  <br>
+  <br>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <th>BSS NO</th>
+        <th>NAME</th>
+        <th>CA</th>
+        <th>SHIFT</th>
+        <th>REMARKS</th>
+      </tr>
+      <ng-container *ngFor="let item of attendance_detail">
+        <tr>
+          <td >{{item.emp_id.bss_no}}</td>
+          <td>{{item.emp_id.name}}</td>
+          <td>{{item.emp_id.user_designation}}</td>
+          <td>{{item.shift_type}}</td>
+          <td>{{item.remarks}}</td>
+        </tr>
+      </ng-container>
+    </table> 
+  </div>
+  <br>
+  <br>
+    <div class="col-md-12" style="text-align: center;">
+      <div class="childs"><button class="prve_button"  style="font-size: 12px;" (click)="prev_shift()">PREV SHIFT</button></div>  
+      <div class="childs"><button class="confirm_button" style="font-size: 12px;" (click)="markaspresent_mark()">MONTH VIEW</button></div> 
+      <div class="childs"><button class="next_button" style="font-size: 12px;"  (click)="next_shift()">NEXT SHIFT</button></div>  
+    </div>
+    <br>
+    <br>
+
+</ion-content>
+

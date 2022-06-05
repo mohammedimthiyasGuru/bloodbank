@@ -1,0 +1,88 @@
+<ion-content padding class="animated fadeIn login auth-page">
+   <div class="popup_alert" *ngIf="loader_visible">
+    <div class="modal-dialog">
+      <div class="loader"></div>
+    </div>
+  </div>
+   <div class="">
+  <div class="row">
+    <div class="col-md-12" style="text-align: center;
+    margin-top: 35%;">
+      <img style="width: 25%;" src="../../../assets/img/logo1.png" class="imgs">
+      <p style="font-size: 30px;
+      color: #e94d62;
+      font-weight: 400;">Blood Bank</p>
+    </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12" style="text-align: center;margin-top: 35%;">
+     <div class="col-md-12">
+     <div class="shadows"> 
+      <div class="row">
+        <div class="column20">
+          <div class="container">
+            <div class="vertical-center" style="margin-left: 30%;">
+              <img src="../../../assets/icon/mail.png">
+            </div>
+          </div>
+           
+        </div>
+        <div class="column10" >
+          <div class="container" style="padding:0% !important;margin-top: 2px;">
+            <div class="vertical-center">
+              <p style="font-size: 33px;
+              font-weight: 100; color: lightgray;" >|</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="column70">
+          <div class="container" style="padding:0% !important;">
+            <div class="vertical-center" style="text-align: left;">
+              <span style="color: #9d9d9d">User Name</span>
+              <input type="text" [(ngModel)]="login_id" name="login_id" class="text_field_css">
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+   </div>
+   <br>
+   <div class="col-md-12">
+    <div class="shadows"> 
+     <div class="row">
+       <div class="column20">
+         <div class="container">
+           <div class="vertical-center" style="margin-left: 30%;">
+             <img src="../../../assets/icon/lock.png">
+           </div>
+         </div>
+          
+       </div>
+       <div class="column10" >
+         <div class="container" style="padding:0% !important;margin-top: 2px;">
+           <div class="vertical-center">
+             <p style="font-size: 33px;
+             font-weight: 100; color: lightgray;" >|</p>
+           </div>
+         </div>
+         
+       </div>
+       <div class="column70">
+         <div class="container" style="padding:0% !important;">
+           <div class="vertical-center" style="text-align: left;">
+             <span style="color: #9d9d9d">Password</span>
+             <input type="password" [(ngModel)]="password" name="password" class="text_field_css">
+           </div>
+         </div>
+       </div>
+   </div>
+   </div>
+  </div>
+     <br>
+     <button class="primary_button" (click)="goToHome()">Sign In</button>
+     <br>
+   </div>
+   </div>
+  </div>
+ </ion-content>

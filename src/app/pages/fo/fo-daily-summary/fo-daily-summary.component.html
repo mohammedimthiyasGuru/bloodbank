@@ -1,0 +1,77 @@
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+<ion-content>
+  <div class="row">
+    <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+      <button  class="primary_button" style="width: 80% !important;">DAILY SHORTAGE LIST</button>
+    </div>
+
+    <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+      <p class="lable_one">Johnson Private Limited</p>
+      </div>
+      <div class="col-md-12" style="text-align : center; margin-top: 10px;">
+          <div class="childs"><button class="prve_button"  style="font-size: 12px;" (click)="prev_date()"><</button></div>  
+          <div class="childs"><button class="confirm_button" style="font-size: 12px;">08 - 02- 2022</button></div> 
+          <div class="childs"><button class="next_button" style="font-size: 12px;"  (click)="next_date()">></button></div>  
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <div class="col-md-12 table_wrapper">
+    <table id="customers">
+      <tr>
+        <th>SITE</th>
+        <th>SHIFT 1</th>
+        <th>SHIFT 2</th>
+        <th>SHIFT 3</th>
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">ZOHO</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">WIBRO</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+        
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">TCS</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+        
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">TECH MAH</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+        
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">BSS</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+        
+      </tr>
+      <tr>
+        <td (click)="new_fo_monthlyview_redir()">JOHNSON</td>
+        <td >35/36</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table> 
+  </div>
+  <br>
+  <br>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 50% !important;" (click)="back_redirec()">BACK</button>
+  </div>
+</ion-content>
+<app-footer></app-footer>

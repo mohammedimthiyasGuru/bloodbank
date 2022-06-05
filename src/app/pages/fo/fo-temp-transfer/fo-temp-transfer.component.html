@@ -1,0 +1,143 @@
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+<ion-content>
+  <ion-card class="bg-white" style="padding: 10px;">
+    <div class="popup_alert"  *ngIf="popup">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Are you sure you want to mark as present ?</h4>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="child"><button class="cancel_button" (click)="mark_as_cancel()">Canel</button></div>  
+                <div class="child"><button class="confirm_button" (click)="markaspresent_mark()">Confirm</button></div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h5>TEMPRORY TRANSFER OF MANPOWER</h5>
+     <div  style="text-align: left;">
+      <label class="lables"  for="cars">Select From Unit :</label>  <br>
+      <div  style="margin-top: 10px;">
+      <select name="cars" id="cars" style="width: 100%;height: 30px;" class="input_css">
+        <option value="volvo">JOHNSON</option>
+        <option value="saab">TCS</option>
+        <option value="mercedes">WIBRO</option>
+        <option value="audi">BSS</option>
+      </select>
+       </div>
+     </div>
+     <br>
+     <div style="text-align: left;">
+      <label class="lables"  for="cars">Select Employee:</label> <br>
+      <div class="dropdown_op" style="margin-top: 10px;">
+      <select name="cars" id="cars" style="width: 100%;height: 30px;" class="input_css">
+        <option value="volvo">E-001 - (Mohammed imthiyas)</option>
+        <option value="saab">E-002 - (Mohammed )</option>
+        <option value="mercedes">E-003 - ( imthiyas)</option>
+        <option value="audi">E-004 - (Mohammed imthiyas)</option>
+        <option value="mercedes">E-004 - ( imthiyas)</option>
+        <option value="audi">E-005 - (Mohammed imthiyas)</option>
+        <option value="mercedes">E-006 - ( imthiyas)</option>
+        <option value="audi">E-006 - (Mohammed imthiyas)</option>
+        <option value="mercedes">E-007 - (Mohammed )</option>
+        <option value="audi">E-008 - (Mohammed imthiyas)</option>
+        <option value="mercedes">E-008 - (Mohammed imthiyas)</option>
+        <option value="audi">E-0020 - (Mohammed )</option>
+        <option value="mercedes">E-011 - (Mohammed imthiyas)</option>
+        <option value="audi">E-0012 - (Mohammed )</option>
+      </select>
+      </div>
+      </div>
+      <br>
+      <div style="text-align: left;">
+       <label class="lables"  for="cars">Select to Unit :</label>  <br>
+       <div class="dropdown_op" style="margin-top: 10px;">
+       <select name="cars" style="width: 100%;height: 30px;"  id="cars" class="input_css">
+         <option value="volvo">JOHNSON</option>
+         <option value="saab">TCS</option>
+         <option value="mercedes">WIBRO</option>
+         <option value="audi">BSS</option>
+       </select>
+        </div>
+     </div>
+     <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+      <button  class="primary_button" style="width: 80% !important;" (click)="transfer_pop()">TRANSFER</button>
+    </div>
+  </ion-card>
+  <ion-card class="bg-white" style="padding: 10px;">
+  <label class="lables" for="cars">TRANSFER HISTORY</label><br>
+  <br>
+  <table id="customers">
+    <tr>
+      <th>DATE</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Emp</th>
+      <th>Status</th>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Waiting For Approval</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+    <tr >
+      <td>23-10-2022</td>
+      <td>TCS</td>
+      <td>Johnson</td>
+      <td>E-001</td>
+      <td>Allocated</td>
+    </tr>
+  </table> 
+  </ion-card> 
+
+</ion-content>
+<app-footer></app-footer>
+
+  

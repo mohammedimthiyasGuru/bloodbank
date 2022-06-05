@@ -1,0 +1,219 @@
+
+<ion-content>
+  <div class="row">
+   <div class="childs" style="text-align: left !important;padding: 22px;" (click)="backaction()">
+  <img src="../../../assets/icon/arrow-right.png">
+   </div>
+   <div class="childs" style="text-align: center !important;color: #464A57;font-size: 22px;">
+   Blood Bank
+   </div>
+   <div class="childs" style="text-align: right !important;padding: 22px;">
+    <img src="../../../assets/icon/menu-left-alt.png"> 
+   </div>
+  </div>
+  <div class="row" style="text-align: left;
+  margin-left: 12px;
+  font-size: 20px;
+  color: gray;">
+  Select Blood Group
+  </div>
+  <div class="row" style="padding: 20px;font-size: 12px;">
+    <div class="scrollmenu">
+      <div class="childsss" style="text-align: center!important;padding: 5px;"  *ngIf="!status1" (click)="change_status1(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/aplusl.png"> 
+           <p style="margin-top: 10px;">A Positive</p>
+           <p>(A+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status1">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/aplus.png"> 
+           <p style="margin-top: 10px;">A Positive</p>
+           <p>(A+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status2" (click)="change_status2(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (10).png"> 
+           <p style="margin-top: 10px;">AB Positive</p>
+           <p>(AB+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status2">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (11).png"> 
+           <p style="margin-top: 10px;">AB Positive</p>
+           <p>(AB+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status3" (click)="change_status3(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (12).png"> 
+           <p style="margin-top: 10px;">O Negative</p>
+           <p>(O-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status3">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (13).png"> 
+           <p style="margin-top: 10px;">O Negative</p>
+           <p>(O-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status4" (click)="change_status4(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (14).png"> 
+           <p style="margin-top: 10px;">B Negative</p>
+           <p>(B-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status4">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (15).png"> 
+           <p style="margin-top: 10px;">B Negative</p>
+           <p>(B-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status5" (click)="change_status5(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (16).png"> 
+           <p style="margin-top: 10px;">A Negative</p>
+           <p>(A-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status5">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (17).png"> 
+           <p style="margin-top: 10px;">A Negative</p>
+           <p>(A-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status6" (click)="change_status6(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (18).png"> 
+           <p style="margin-top: 10px;">AB Negative</p>
+           <p>(AB-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status6">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (19).png"> 
+           <p style="margin-top: 10px;">AB Negative</p>
+           <p>(AB-)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status7" (click)="change_status7(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (20).png"> 
+           <p style="margin-top: 10px;">O Positive</p>
+           <p>(O+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status7">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (21).png"> 
+           <p style="margin-top: 10px;">O Positive</p>
+           <p>(O+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="!status8" (click)="change_status8(true)">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #f2b2b2;
+        ">
+           <img src="../../../assets/icon/Group 9432 (22).png"> 
+           <p style="margin-top: 10px;">B Positive</p>
+           <p>(B+)</p>
+        </div>
+      </div>
+      <div class="childsss" style="text-align: center!important;padding: 5px;" *ngIf="status8">
+        <div class="" style="text-align: center;
+        border-radius: 20px;
+        border: 1px solid #e9465e;
+        ">
+           <img src="../../../assets/icon/Group 9432 (23).png"> 
+           <p style="margin-top: 10px;">B Positive</p>
+           <p>(B+)</p>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" style="text-align: center;">
+  
+    <ng-container *ngFor="let item of data_list">
+      <div class="col-md-12">
+      <div class="shadows"> 
+       <div class="row">
+        <a href="tel:{{item.phone_number}}">
+         <div class="column20">
+           <div class="container">
+             <div class="vertical-center" style="margin-left: 16%;width: 50%;">
+               <img src="../../../assets/icon/userpro.png">
+             </div>
+           </div>
+         </div>
+         <div class="column10" style="color:white">.
+         </div>
+         <div class="column70">
+           <div class="container" style="padding:0% !important;">
+             <div class="vertical-center" style="text-align: left;">
+               <span>{{item.name}}  -   ( {{item.location}} )</span><br>
+               <img src="../../../assets/icon/Vector (4).png"><span style="margin-left: 10px;color: gray;">{{item.phone_number}}</span>
+             </div>
+           </div>
+         </div>
+         </a>
+     </div>
+     </div>
+    </div>
+    <br>
+  </ng-container> 
+    <br>
+    </div>
+    </div>
+</ion-content> 
+<app-footer></app-footer>

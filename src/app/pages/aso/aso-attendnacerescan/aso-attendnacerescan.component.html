@@ -1,0 +1,60 @@
+<ion-menu-button color="secondary" style="padding-top: 20px;
+padding-left: 10px;background: white;"></ion-menu-button>
+<ion-content>
+
+  <div class="popup_alert"  *ngIf="user_not_found_pop">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">This Employee not allocated to this site. Are you sure you want to make a present ?</h4>
+          <p>Emp No : {{temp_emp.emp_no}}</p>
+          <p>Emp name :  {{temp_emp.emp_name}}</p>
+          <p>Emp Type : {{temp_emp.emp_type}} </p>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="child"><button class="cancel_button" (click)="mark_as_cancel()">Canel</button></div>  
+              <div class="child"><button class="confirm_button" (click)="markaspresent_mark()">Confirm</button></div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="lables" style="text-align: center;
+  font-size: 17px;">{{site_details.unit_name}} </p>
+    <p class="lables" style="text-align: center;
+    font-size: 17px;">{{shift_type}} </p>
+  <br>
+  <ion-card class="bg-white" *ngIf="start_statuss">
+   <div style="padding:20px;text-align: left;" *ngIf="start_status">
+    <p> <span class="lables"> E-Code : </span>{{temp_emp.emp_no}} </p>
+    <p> <span class="lables"> Name : </span> {{temp_emp.emp_name}} </p>
+    <p> <span class="lables"> Role : </span> {{temp_emp.emp_type}} </p>
+    <p> <span class="lables"> Status : </span> Present</p>
+    <p> <span class="lables"> Date Time : </span> {{today_date}} </p>
+    <p> <span class="lables"> Shift Type : </span> {{shift_type}} </p>
+  </div>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 80% !important;" (click)="scanCode1()" *ngIf="!start_status">START MARKING</button>
+  </div>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 80% !important;" (click)="scanCode()" *ngIf="start_status">NEXT</button>
+  </div>
+  <div class="col-md-12" style="text-align : center; margin-top: 20px;">
+    <button  class="primary_button" style="width: 80% !important;" (click)="over_view()">COMPLETED</button>
+  </div>
+<br>
+<br>
+<br>
+  </ion-card>
+  </ion-content>
+  <app-footer></app-footer>
+
+
+
+
