@@ -31,7 +31,7 @@ export class DonorComponent implements OnInit {
 
 
 
-  employee_detail = this.storage.get('employee_detail');
+  employee_detail = this.storage.get('user_detail');
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,

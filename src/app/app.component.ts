@@ -16,7 +16,7 @@ import { Pages } from './interfaces/pages';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  employee_detail = this.storage.get('employee_detail');
+  employee_detail = this.storage.get('user_detail');
   public appPages: Array<Pages>;
   routes_value = '/aso_dashboard';
 

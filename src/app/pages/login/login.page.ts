@@ -65,7 +65,7 @@ export class LoginPage implements OnInit {
       console.log(response.Data);
       if(response.Code == 200){
         this.toastr.successToastr(response.Message);
-        this.storage.set('employee_detail',response.Data)
+        this.storage.set('user_detail',response.Data)
         this.navCtrl.navigateRoot('/dashboard');
       }else {
         this.loader_visible = false;
